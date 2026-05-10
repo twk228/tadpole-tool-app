@@ -91,7 +91,7 @@
 </template>
 
 <script setup lang="ts" name="storyListIndex">
-  import { ref, onMounted } from 'vue';
+  import { ref } from 'vue';
   import { useRouter } from 'vue-router';
   import Api from '@/api/story-list';
   import type { StoryItem, TabItem } from './type';
@@ -187,7 +187,7 @@
   };
 
   // 初始化
-  onMounted(async () => {
+  onActivated(async () => {
     try {
       const res = await Api.getTabList({
         app_id: 'kfpw9renioaqzrgi',

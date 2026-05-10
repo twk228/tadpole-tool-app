@@ -153,7 +153,7 @@
   };
 
   // 初始化
-  onMounted(() => {
+  onActivated(() => {
     storyId.value = (route.query.storyId as string) || '';
     if (storyId.value) {
       goDetail();

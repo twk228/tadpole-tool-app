@@ -85,7 +85,7 @@
 </template>
 
 <script setup lang="ts" name="storyListSearch">
-  import { ref, onMounted } from 'vue';
+  import { ref } from 'vue';
   import { useRouter } from 'vue-router';
   import Api from '@/api/story-list';
   import type { StoryItem } from './type';
