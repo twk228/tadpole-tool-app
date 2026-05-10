@@ -4,7 +4,6 @@ import type { Response } from './types';
 // import router from '@/router';
 import { useToast } from '@/hooks';
 import { useUserStore } from '@/store';
-import * as ww from '@wecom/jssdk';
 
 axios.defaults.headers.post['Content-Type'] =
   'application/x-www-form-urlencoded;charset=UTF-8';
