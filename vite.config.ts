@@ -14,7 +14,7 @@ import vuesetupExtend from 'vite-plugin-vue-setup-extend';
 const pathResolve = (dir: string) => resolve(__dirname, dir);
 
 // https://vitejs.dev/config/
-export default ({ mode }) => {
+export default ({ mode }: any) => {
   // 获取环境变量
   const env: Partial<ImportMetaEnv> = loadEnv(mode, process.cwd());
 
@@ -86,6 +86,13 @@ export default ({ mode }) => {
       // port: 6666, // vite3默认端口为5173
       host: true, // 支持从ip启动
       // open: true, // 项目启动后自动打开
+      proxy: {
+        '/mxnzpApi': {
+          target: 'https://www.mxnzp.com/api', // 替换为实际的 API 域名
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/mxnzpApi/, ''),
+        },
+      },
       // 增加预构建超时时间
       fs: {
         strict: false,

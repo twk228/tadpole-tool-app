@@ -22,8 +22,17 @@ declare module '@vue/runtime-core' {
     ScreenModel: typeof import('./src/components/screenModel.vue')['default']
     SelectUserPrivileges: typeof import('./src/components/selectUserPrivileges.vue')['default']
     ToolTip: typeof import('./src/components/toolTip.vue')['default']
+    VanBackTop: typeof import('vant/es')['BackTop']
     VanButton: typeof import('vant/es')['Button']
+    VanEmpty: typeof import('vant/es')['Empty']
     VanIcon: typeof import('vant/es')['Icon']
+    VanList: typeof import('vant/es')['List']
+    VanNavBar: typeof import('vant/es')['NavBar']
     VanPopup: typeof import('vant/es')['Popup']
+    VanPullRefresh: typeof import('vant/es')['PullRefresh']
+    VanSearch: typeof import('vant/es')['Search']
+    VanSkeleton: typeof import('vant/es')['Skeleton']
+    VanTab: typeof import('vant/es')['Tab']
+    VanTabs: typeof import('vant/es')['Tabs']
   }
 }

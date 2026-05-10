@@ -15,7 +15,7 @@ const { showToast } = useToast();
 const service = axios.create({
   // 根据不同env设置不同的baseURL
   baseURL: import.meta.env.VITE_APP_API_BASE_URL,
-  timeout: 1000 * 60
+  timeout: 1000 * 60,
 });
 
 // axios实例拦截请求
@@ -46,7 +46,7 @@ service.interceptors.response.use(
   (response: AxiosResponse<Response>) => {
     // response.data就是后端返回的数据，结构根据你们的约定来定义
     const res = response.data;
-    if (res.code !== 200) {
+    if (![1].includes(res.code as number)) {
       let errMessage = '';
       const userStore = useUserStore();
       switch (res.code) {
@@ -56,26 +56,6 @@ service.interceptors.response.use(
           break;
         case 401: // token过期
           errMessage = '';
-          setTimeout(() => {
-            if (userStore.appSource === 'welink') {
-              sessionStorage.removeItem('token');
-              location.reload();
-            } else if (userStore.appSource.includes('qiwei')) {
-              showToast('登录已过期，请重新打开应用', 'fail');
-              setTimeout(() => {
-                sessionStorage.removeItem('token');
-                ww.closeWindow({
-                  success: function () {
-                    console.log('关闭成功');
-                  },
-                  fail: function (error: any) {
-                    console.log('关闭失败', error);
-                  },
-                });
-              }, 1500);
-            }
-          }, 500);
-          // router.push('/login');
           break;
         case 2: // 无权限
           errMessage = 'No permission';
