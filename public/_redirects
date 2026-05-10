@@ -1,0 +1,3 @@
+# 把 /mxnzpApi/\* 的请求代理到目标接口，状态码 200 表示反向代理，不是重定向
+
+/mxnzpApi/\* https://www.mxnzp.com/api/:splat 200
