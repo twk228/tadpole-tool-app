@@ -1,0 +1,305 @@
+.dealer-portrait {
+  background-color: #f7f8fa;
+
+  .page-header {
+    background-color: white;
+    padding: @padding-com;
+    color: @gray;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.6px;
+    margin-bottom: @margin-sm;
+
+    .filter-box1 {
+      display: flex;
+      gap: @padding-xs;
+
+      .filter-item {
+        width: fit-content;
+        height: 36px;
+        max-width: 100px;
+        min-width: 80px;
+        border-radius: 4px;
+        background-color: #f7f8fa;
+        padding: @padding-xs;
+        color: #333333;
+        font-size: 14px;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+
+        .text {
+          flex: 1;
+          white-space: nowrap;
+        }
+
+        .selected {
+          font-weight: 600;
+        }
+
+        .icon {
+          width: 8px;
+          height: 8px;
+          margin-left: 4px;
+          margin-top: 2px;
+        }
+        .icon2 {
+          width: 12px;
+          height: 12px;
+          margin-left: 4px;
+          margin-top: 2px;
+        }
+      }
+
+      .submit-btn {
+        height: 36px;
+        padding: 8px 12px;
+        font-size: 14px;
+        color: #246eff;
+        border-color: #246eff;
+        white-space: nowrap;
+        position: absolute;
+        right: 20px;
+      }
+    }
+
+    .filter-box2 {
+      height: 36px;
+      box-sizing: border-box;
+      padding: 8px;
+      margin-bottom: 10px;
+      background: #fff;
+      border-radius: 2px;
+      border: 1px solid #c9cdd4;
+      color: #333333;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+
+  .page-inner {
+    .section {
+      margin-bottom: @margin-sm;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .section-title {
+        background-color: white;
+        padding: @padding-com;
+        margin-bottom: 0;
+      }
+
+      .month-sales-title {
+        padding-bottom: 0;
+      }
+
+      .financial-operation-title {
+        background-color: rgba(255, 255, 255, 0.44);
+        padding-bottom: @padding-sm;
+      }
+
+      .section-content {
+        background-color: white;
+        padding: @padding-com;
+      }
+
+      // 基本信息 开始
+      .basic-info {
+        background-color: white;
+
+        .table-header {
+          background-color: #ecf2ff;
+          padding: @padding-com;
+          color: #1d2129;
+          font-size: 14px;
+          font-weight: 600;
+          letter-spacing: -0.3px;
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .detail-box {
+          padding: @padding-com;
+
+          .line {
+            display: flex;
+            // align-items: center;
+            margin-bottom: @margin-sm;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            font-size: 14px;
+            font-weight: 400;
+
+            .label {
+              color: #4e5969;
+              font-weight: 600;
+              margin-right: @margin-base;
+              width: 30%;
+              text-align: right;
+            }
+
+            .value {
+              color: #1d2129;
+              width: 70%;
+            }
+          }
+        }
+
+        .regional-market-situation {
+          padding: @padding-sm @padding-com;
+
+          .item-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: @padding-sm;
+
+            .item {
+              width: calc(50% - (@padding-sm / 2));
+              background-color: #f7f8fa;
+              border-radius: 4px;
+              padding: @padding-sm 0px;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+
+              .value {
+                color: #1d2129;
+                font-size: 16px;
+                font-weight: 500;
+                margin-bottom: @margin-base;
+              }
+
+              .label {
+                color: #4e5969;
+                font-size: 14px;
+                font-weight: 400;
+              }
+            }
+          }
+        }
+
+        .channel-operation {
+          padding: @padding-sm @padding-com;
+          padding-bottom: 68px;
+
+          .item-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: @padding-sm;
+
+            .item {
+              width: calc(50% - (@padding-sm / 2));
+              background-color: #f7f8fa;
+              border-radius: 4px;
+              padding: @padding-sm 0px;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+
+              .value {
+                color: #1d2129;
+                font-size: 14px;
+                font-weight: 500;
+                letter-spacing: -0.3px;
+                margin-bottom: @margin-base;
+              }
+
+              .label,
+              .linkRelativeRatio {
+                color: #4e5969;
+                font-size: 12px;
+                font-weight: 400;
+                letter-spacing: -0.3px;
+                margin-bottom: @margin-base;
+              }
+
+              .linkRelativeRatio {
+                margin-bottom: 0px;
+              }
+            }
+          }
+        }
+      }
+
+      // 基本信息 结束
+      // 月度销量 开始
+      .month-sales {
+        background-color: white;
+
+        .month-sales-chart-box {
+          height: 40vh;
+          min-height: 266px;
+          // padding: @padding-com;
+          padding-top: 0;
+          padding-left: 10px;
+          padding-bottom: 10px;
+        }
+
+        .channel-growth-potential {
+          .channel-growth-potential-chart-box {
+            height: 40vh;
+            min-height: 266px;
+            padding-top: 0;
+            padding-left: 10px;
+            padding-bottom: 10px;
+          }
+        }
+      }
+
+      // 月度销量 结束
+      // 资金运营 开始
+      .financial-operation {
+        background-color: rgba(255, 255, 255, 0.44);
+
+        .common-section {
+          padding: 0 @padding-com;
+          padding-bottom: 18px;
+        }
+
+        .item-container {
+          display: flex;
+          flex-wrap: wrap;
+          background-color: #f7f8fa;
+          border-radius: 4px;
+          gap: @margin-com;
+          padding: @padding-com 0px;
+
+          .item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .value {
+              color: #334457;
+              font-size: 16px;
+              font-weight: 500;
+              margin-bottom: @margin-base;
+            }
+
+            .label,
+            .linkRelativeRatio {
+              color: #4e5969;
+              font-size: 12px;
+              font-weight: 400;
+              letter-spacing: -0.3px;
+              margin-bottom: @margin-base;
+            }
+
+            .linkRelativeRatio {
+              font-weight: 500;
+              margin-bottom: 0px;
+            }
+          }
+        }
+      }
+
+      // 资金运营 结束
+    }
+  }
+}
